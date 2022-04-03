@@ -10,6 +10,7 @@
 </script>
 
 <header>
+  
   <span>{blogTitle}</span>
   <nav>
     <ul>

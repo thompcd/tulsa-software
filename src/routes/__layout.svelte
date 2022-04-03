@@ -1,22 +1,12 @@
 <script>
-  import Header from '$lib/Header.svelte'
+  import Nav from '$lib/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
 </script>
 
-<Header blogTitle={'SvelteKit x Sanity Blog'} />
+<Nav blogTitle={'Tulsa Software'} />
 
 <main style="padding: 1em">
   <slot />
 </main>
 
 <Footer />
-
-<style>
-  :global(a) {
-    color: #1a4d9e;
-  }
-  :global(a:hover) {
-    color: #1e61cd;
-    border-bottom: none;
-  }
-</style>

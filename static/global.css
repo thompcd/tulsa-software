@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed&display=swap');
+
+html{
+	background-color: #2b2b2b;	
+	color: white;
+}
+body {
+	margin: 0;
+	font-family: 'Open Sans Light', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.5;
+	color:white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 1.612rem;
+	font-family: "Roboto Condensed";
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: #ed703a;
+	text-decoration: none;
+	transition: 0.5s ease all;
+}
+
+a:hover{
+	color: #2e9be6;
+	text-decoration: underline;
+}
+
+code {
+	font-family: menlo, inconsolata, monospace;
+	font-size: calc(1em - 2px);
+	color: white;
+	background-color: #2b2b2b;	
+	padding: 0.2em 0.4em;
+	border-radius: 2px;
+}
+
+@media (min-width: 400px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+.underline-box a {line-height: 3.5rem;}
+
+.custom-underline {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.underline-box .custom-underline::after {
+  top: 75%;
+  height: 2px !important;
+  width: 40%;
+  left: 30%;
+  background-color: rgba(255, 255, 255, 0.6);
+    transition: 0.4s ease-out all .1s;
+  content: "";
+  position: absolute;
+  z-index: -10000;
+}
+
+.underline-box:hover .custom-underline::after {
+  background-color: #2e9be6;
+  width: 90%;
+  left: 5%;
+  transition: 0.5s ease all;
+  z-index: -10000;
+}
+
+ [data-selected="true"] .custom-underline::after {
+	background-color: #2e9be6;
+	width: 90%;
+	left: 5%;
+	  transition: 0.5s ease all;
+	z-index: -10000;
+  }

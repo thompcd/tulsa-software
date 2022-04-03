@@ -21,12 +21,10 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Tulsa Software</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
-
-<PostsGrid {posts} />
+<h1>Making software. In Tulsa.</h1>
 
 <h2 style="margin-top: 4rem">Author{authors.length > 1 ? 's' : ''}</h2>
 
