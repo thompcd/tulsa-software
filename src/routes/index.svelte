@@ -1,33 +1,30 @@
-<script context="module">
-  export async function load({fetch}) {
-    try {
-      const res = await fetch('/blog/all.json')
-      const data = await res.json()
-      return {
-        props: data
-      }
-    } catch (err) {
-      console.log('500:', err)
-    }
-  }
-</script>
-
 <script>
-  import AuthorCard from '$lib/AuthorCard.svelte'
-  import PostsGrid from '$lib/PostsGrid.svelte'
+import Ticker from '$lib/Ticker.svelte'
 
-  export let posts
-  export let authors
+let tickerProps = {
+      direction: ['left', [ 'left', 'right', 'top', 'bottom' ]],
+      duration: 30,
+      delay: 0,
+      loop: true,
+      pausing: true,
+      alternate: false,
+      behavior: ['auto', [ 'auto', 'always' ]]
+    };
 </script>
-
 <svelte:head>
   <title>Tulsa Software</title>
 </svelte:head>
 
-<h1>Making software. In Tulsa.</h1>
+<Ticker {...tickerProps}>
+  Web UI/UX. Data. Automation. IOT. Manufacturing. Industrial. Small Business. <i>In Tulsa</i> Wooooooooooooooooo
+</Ticker>
+<h2>I'm Corey. I do contract software work. Sometimes solo. Sometimes not.</h2>
 
-<h2 style="margin-top: 4rem">Author{authors.length > 1 ? 's' : ''}</h2>
+//social icons
 
-{#each authors as author}
-  <AuthorCard {author} />
-{/each}
+<a href="/projects"><h2>/projects</h2></a>
+Samples of work the group has participated in.
+
+<a href="/contact"><h2>/contact</h2></a>
+Samples of work the group has participated in.
+

@@ -16,7 +16,7 @@
 <header>
     <nav >
       <ul mobile-mode={ w < 480}>
-        <li class="underline-box" id="home"><a href="/">⭐ Making Software. In Tulsa.</a></li>
+        <li class="underline-box" id="home"><a href="/">⭐</a></li>
         <li class="underline-box" data-selected={path === '/contact'}><a class='custom-underline' href="/contact">contact</a></li>
         <li class="underline-box" data-selected={path === '/blog'}><a class='custom-underline' href="/blog">posts</a></li>
         <li class="underline-box" data-selected={path === '/'}><a class='custom-underline' href="/">home</a></li>
