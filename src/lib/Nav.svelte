@@ -8,10 +8,8 @@
     let path
     $: ({path} = $page)
 	
-	let w, h;
+	export let w, h;
 </script>
-
-<svelte:window  bind:innerHeight={h} bind:innerWidth={w}></svelte:window>
 
 <header>
     <nav >
