@@ -8,6 +8,8 @@
     export let strokewidth = "0.1px"
     export let duration = 1500;
     export let condition = false;
+	export let w, h;
+
 </script>
 
 <!-- <svg viewBox="0 0 5 5" xmlns="http://www.w3.org/2000/svg">
@@ -20,15 +22,15 @@
 				</path>
 
 </svg> -->
-<svg viewBox="8.06 -4.855 120 90" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="8.06 -4.855 120 90" style="height:{h};width:{w}" xmlns="http://www.w3.org/2000/svg">
 	{#if condition}
-		<g transform="matrix(0.160374, 0, 0, 0.160374, 26.303761, 0)" transition:draw="{{duration: 1500, easing: quintOut}}">
+		<g transform="matrix(0.160374, 0, 0, 0.160374, 26.303761, 0)" transition:draw="{{duration: duration, easing: quintOut}}">
 			<polygon
-				transition:draw="{{duration: 4500, easing: quintOut}}"
-				fill="white"
-				stroke="white"
-				stroke-width="0.1px"
-				points="233.828,0 301.053,117.393 436.328,116.914 368.275,233.828 436.328,350.742 301.053,350.264 233.828,467.656 166.605,350.264 31.328,350.742 99.381,233.828 31.328,116.914 166.605,117.393 "
+				transition:draw="{{duration: duration, easing: quintOut}}"
+				fill={fill}
+				stroke={color}
+				stroke-width={strokewidth}
+				points={path}
 			/>
 		</g>
 	{/if}
@@ -36,8 +38,5 @@
 <style>
 	svg {
 		display: block;
-		margin-top: -28px;
-		height: 200px;
-		width: 200px;
 	}
 </style>

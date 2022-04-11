@@ -9,7 +9,7 @@
   $: ({path} = $page)
 </script>
 
-<header>
+<header class="header">
   
   <span>{blogTitle}</span>
   <nav>
@@ -40,6 +40,10 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 1em;
+    color: "#F8F1E0";
+  }
+  .header{
+    padding-bottom: 72px;
   }
   @media screen and (min-width: 400px) {
     header {
