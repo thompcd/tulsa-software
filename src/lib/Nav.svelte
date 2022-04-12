@@ -6,7 +6,6 @@
 	import DrawnSvg  from '$lib/DrawnSvg.svelte'
     export let blogTitle = 'Tulsa Software'
 
-	let starPath = "233.828,0 301.053,117.393 436.328,116.914 368.275,233.828 436.328,350.742 301.053,350.264 233.828,467.656 166.605,350.264 31.328,350.742 99.381,233.828 31.328,116.914 166.605,117.393 ";
     let path
     $: ({path} = $page)
 	
@@ -17,7 +16,7 @@
     <nav >
       <ul mobile-mode={ w < 480}>
         <li class="underline-box" id="home"><a href="/">
-			<DrawnSvg h="200" w="200" condition={true} path={starPath} duration=2500 fill="white" color="black"></DrawnSvg></a>
+			<DrawnSvg h="160" w="160" condition={true} duration=2500 fill="white" color="black"></DrawnSvg></a>
 		</li>
         <li class="underline-box" data-selected={path === '/contact'}><a class='custom-underline' href="/contact">contact</a></li>
         <li class="underline-box" data-selected={path === '/blog'}><a class='custom-underline' href="/blog">posts</a></li>
