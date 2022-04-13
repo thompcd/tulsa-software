@@ -16,7 +16,7 @@
     <nav >
       <ul mobile-mode={ w < 480}>
         <li class="underline-box" id="home"><a href="/">
-			<DrawnSvg h="160" w="160" condition={true} duration=2500 fill="white" color="black"></DrawnSvg></a>
+			<DrawnSvg h="120" w="120" condition={true} duration=2500 fill="white" color="black"></DrawnSvg></a>
 		</li>
         <li class="underline-box" data-selected={path === '/contact'}><a class='custom-underline' href="/contact">contact</a></li>
         <li class="underline-box" data-selected={path === '/blog'}><a class='custom-underline' href="/blog">posts</a></li>
