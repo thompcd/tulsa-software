@@ -2,9 +2,10 @@
     import ProjectCard from '$lib/ProjectCard.svelte'
   
     export let posts = []
+    export let maxWidth = "1fr";
   </script>
   
-  <section>
+  <section style="grid-template-columns: repeat(auto-fit, minmax(250px, {maxWidth}))">
     {#each posts as post (post.slug.current)}
       <ProjectCard {post} />
     {/each}
@@ -13,7 +14,6 @@
   <style>
     section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 3rem 2rem;
       margin-top: 3rem;
     }
