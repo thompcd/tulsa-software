@@ -22,6 +22,6 @@
     <title>Projects</title>
   </svelte:head>
   
-  <h1>Recent posts</h1>
+  <h1>All Projects</h1>
   
   <ProjectsGrid {posts} />

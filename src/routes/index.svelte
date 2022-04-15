@@ -28,7 +28,7 @@
 </section>
 
 <section>
-  <a href="/projects"><h1>/projects</h1></a>
+  <a href="/projects"><h1>/latest projects</h1></a>
   <ProjectsGrid maxWidth="1fr" {posts} />
 </section>
   
