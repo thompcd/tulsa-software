@@ -47,7 +47,7 @@
 	
 	onMount(sizing);
 	
-	export { direction, duration, delay, loop, pausing, alternate, behavior };
+	export { direction, duration, delay, loop, pausing, alternate, behavior, animate };
 </script>
 
 <style>
