@@ -1,16 +1,46 @@
-<script>
-
+<script context="module">
+  export async function load({fetch}) {
+    try {
+      const res = await fetch('/blog/all.json')
+      const data = await res.json()
+      return {
+        props: data
+      }
+    } catch (err) {
+      console.log('500:', err)
+    }
+  }
 </script>
+
+<script>
+  import PostsGrid from '$lib/PostsGrid.svelte'
+
+  export let posts
+</script>
+
 <svelte:head>
   <title>Tulsa Software</title>
 </svelte:head>
 
-<a href="/projects"><h2>/projects</h2></a>
-Samples of work the group has participated in.
+<section>
+  <a href="/projects"><h1>/projects</h1></a>
+  <PostsGrid {posts} />
+</section>
 
-<a href="/contact"><h2>/contact</h2></a>
-Samples of work the group has participated in.
+<section>
+  <a href="/posts"><h1>/posts</h1></a>
+  <PostsGrid {posts} />
+</section>
 
+<section>
+  <a href="/contact"><h1>/contact</h1></a>
+</section>
+  
 <style>
-
+  section{
+    padding-bottom: 3rem;
+  }
+  h1{
+    color: #162B49;
+  }
 </style>

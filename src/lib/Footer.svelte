@@ -35,12 +35,12 @@ let props = {
 <style>
   footer {
     text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
   #ticker-container {
     margin: -16px 0 32px 0;
-    margin-top: 10vh;
+    margin-top: 1rem;
 
 		width: 100%; 
 		max-height: 28px; 
