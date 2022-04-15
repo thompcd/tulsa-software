@@ -18,10 +18,10 @@
         <li class="underline-box" id="home"><a href="/">
 			<DrawnSvg h="120" w="120" condition={true} duration=2500 fill="white" color="black"></DrawnSvg></a>
 		</li>
-        <li class="underline-box" data-selected={path === '/contact'}><a class='custom-underline' href="/contact">contact</a></li>
-        <li class="underline-box" data-selected={path === '/projects'}><a class='custom-underline' href="/projects">projects</a></li>
-        <li class="underline-box" data-selected={path === '/blog'}><a class='custom-underline' href="/blog">posts</a></li>
-        <li class="underline-box" data-selected={path === '/'}><a class='custom-underline' href="/">home</a></li>
+        <li class="underline-box" data-selected={path.startsWith('/contact')}><a class='custom-underline' href="/contact">contact</a></li>
+        <li class="underline-box" data-selected={path.startsWith('/projects')}><a class='custom-underline' href="/projects">projects</a></li>
+        <li class="underline-box" data-selected={path.startsWith('/blog')}><a class='custom-underline' href="/blog">posts</a></li>
+        <li class="underline-box" data-selected={path ==='/'}><a class='custom-underline' href="/">home</a></li>
       </ul>
     </nav>
 </header>
@@ -57,6 +57,46 @@
     ul[mobile-mode='true']{
         height: 40px;
     }
+
+	.underline-box a {line-height: 3.5rem;}
+
+	.custom-underline {
+		position: relative;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	.custom-underline::after{
+		content: '';
+		display: block;
+		clear: both;
+		position:absolute;
+		transition: 0.5s ease all;
+		background-color: white;
+		height: 2px !important;
+		top: 75%;
+	}
+
+	.custom-underline,
+	.custom-underline:hover,
+	.custom-underline:focus,
+	.custom-underline:active {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	[data-selected = "true"] .custom-underline::after{
+		width: 80%;
+		left: 10%;
+		background-color: rgb(198, 32, 46);
+	}
+
+	[data-selected = "false"] .custom-underline::after {
+		width: 20%;
+		left: 40%;
+	}
 
 	li {
 		display: block;
