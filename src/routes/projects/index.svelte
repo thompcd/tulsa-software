@@ -1,7 +1,7 @@
 <script context="module">
     export async function load({fetch}) {
       try {
-        const res = await fetch('/blog/all.json')
+        const res = await fetch('/projects/all.json')
         const data = await res.json()
         return {
           props: data
@@ -13,10 +13,9 @@
   </script>
   
   <script>
-    import PostsGrid from '$lib/PostsGrid.svelte'
+    import ProjectsGrid from '$lib/ProjectsGrid.svelte'
   
     export let posts
-    export let authors
   </script>
   
   <svelte:head>
@@ -25,4 +24,4 @@
   
   <h1>Recent posts</h1>
   
-  <PostsGrid {posts} />
+  <ProjectsGrid {posts} />

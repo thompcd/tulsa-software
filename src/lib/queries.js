@@ -16,6 +16,20 @@ export function getPostsQuery(extraFilter) {
   }`
 }
 
+export function getProjectsQuery(extraFilter) {
+  return /* groq */ `*[
+    _type == "project" &&
+    defined(slug.current) &&
+    publishedAt < now()
+    ${extraFilter ? `&& ${extraFilter}` : ''}
+  ] | order(publishedAt desc) {
+    title,
+    slug,
+    image,
+    publishedAt,
+  }`
+}
+
 /**
  * You can also re-use parts of projections as fragments.
  * In this case, we're defining that, to render an author card, we need their name, slug & image.

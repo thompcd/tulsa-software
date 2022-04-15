@@ -1,9 +1,9 @@
 import {DocumentIcon} from '@sanity/icons'
 
 export default {
-  name: 'post',
+  name: 'project',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Project Post',
   icon: DocumentIcon,
   fields: [
     {
@@ -128,7 +128,7 @@ export default {
       media: 'image'
     },
     prepare({title = 'No title', slug, media}) {
-      const path = `/blog/${slug.current}/`
+      const path = `/projects/${slug.current}/`
       return {
         title,
         media,

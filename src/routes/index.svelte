@@ -14,6 +14,7 @@
 
 <script>
   import PostsGrid from '$lib/PostsGrid.svelte'
+  import ProjectsGrid from '$lib/ProjectsGrid.svelte'
 
   export let posts
 </script>
@@ -24,7 +25,7 @@
 
 <section>
   <a href="/projects"><h1>/projects</h1></a>
-  <PostsGrid {posts} />
+  <ProjectsGrid {posts} />
 </section>
 
 <section>
