@@ -1,18 +1,7 @@
 <script>
-import Ticker from '$lib/Ticker.svelte'
 import DiGithubBadge from 'svelte-icons/di/DiGithubBadge.svelte'
 import FaSlack from 'svelte-icons/fa/FaSlack.svelte'
 
-let props = {
-      direction: 'left',
-      duration: 60,
-      delay: 0,
-      loop: true,
-      pausing: true,
-      alternate: false,
-      animate: true,
-      behavior: 'auto'
-    };
 </script>
 
 <footer>
@@ -24,12 +13,6 @@ let props = {
       <FaSlack />
     </a>
   </div>
-
-  <div id="ticker-container">
-    <Ticker {...props}>
-      <h2>Web UI/UX. Data. Automation. IOT. Manufacturing. Industrial. Small Business. Web UI/UX. Data. Automation. IOT. Manufacturing. Industrial. Small Business. Web UI/UX. Data. Automation. IOT. Manufacturing. Industrial. Small Business.</h2>
-    </Ticker>
-  </div>
 </footer>
 
 <style>
@@ -38,14 +21,6 @@ let props = {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  #ticker-container {
-    margin: -16px 0 32px 0;
-    margin-top: 1rem;
-
-		width: 100%; 
-		max-height: 28px; 
-		overflow: hidden;
-	}
 
   .icons{
     display: flex;
