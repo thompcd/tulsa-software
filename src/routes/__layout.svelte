@@ -17,7 +17,10 @@
 <Footer />
 
 <style>
-  main{
-    margin: 0 5rem;
+  @media(min-width: 768px){
+
+    main{
+      margin: 0 5rem;
+    }
   }
 </style>
