@@ -1,16 +1,9 @@
 <script>
-	import { draw } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-	
-    export let fill = "none";
-    export let color = "black";
-    export let strokewidth = "0.1px"
-    export let duration = 1500;
     export let condition = false;
 	export let w, h;
-
 </script>
-<div class="logo-container" style="height:{h};width:{w};margin-top:{h/4}px">
+
+<div class="logo-container" style="height:{h}px;width:{w}px;margin-top:{h/4}px">
 	<svg viewBox="{h/2} {w/2} {h} {w}" style="height:{h};width:{w}" xmlns="http://www.w3.org/2000/svg">
 		{#if condition}
 		<g fill="#ebad21">

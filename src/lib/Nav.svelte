@@ -3,7 +3,7 @@
 
 </script>
 <script>
-	import DrawnSvg  from '$lib/DrawnSvg.svelte'
+	import TulsaFlag  from '$lib/TulsaFlag.svelte'
     export let blogTitle = 'Tulsa Software'
 
     let path
@@ -16,7 +16,7 @@
     <nav >
       <ul mobile-mode={ w < 480}>
         <li class="underline-box" id="home"><a href="/">
-			<DrawnSvg h="120" w="120" condition={true} duration=2500 fill="white" color="black"></DrawnSvg></a>
+			<TulsaFlag h="120" w="120" condition={true} duration=2500 fill="white" color="black"></TulsaFlag></a>
 		</li>
         <li class="underline-box" data-selected={path.startsWith('/contact')}><a class='custom-underline' href="/contact">contact</a></li>
         <li class="underline-box" data-selected={path.startsWith('/projects')}><a class='custom-underline' href="/projects">projects</a></li>
